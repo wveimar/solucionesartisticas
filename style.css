@@ -1,9 +1,9 @@
 :root {
-  --main-font: 'Century Gothic', Arial, sans-serif;
-  --body-color: #F0F3F6;
-  --header-color: #2C3E50;
+  --main-font: "Century Gothic", Arial, sans-serif;
+  --body-color: #f0f3f6;
+  --header-color: #343536;
   --red-color: #fbf4f3;
-  --green-color: #fdfdfd;
+  --green-color: #ffffff;
   --base-margin: 20px;
 }
 
@@ -44,12 +44,12 @@ header img {
 header h2 {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: white; /* Cambio de color del título para mayor contraste */
+  color: #fcb900; /* Cambio de color del título para mayor contraste */
 }
 
 header p {
   font-size: 1.2rem;
-  color: rgb(255, 255, 255); /* Cambio de color del texto para mayor contraste */
+  color: #fcb900; /* Cambio de color del texto para mayor contraste */
 }
 
 .home {
@@ -68,6 +68,47 @@ header p {
   overflow: hidden;
 }
 
+.in-flex .photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 5px;
+  padding: 40px 0px;
+  overflow: hidden;
+}
+
+.in-flex .photo-gallery > a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  margin: 10px;
+}
+
+.in-flex .photo-gallery > a:hover {
+  filter: blur(2px);
+  transform: rotate(10deg) scale(1.3);
+}
+
+.in-flex .photo-gallery img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.in-flex .linea {
+  background-color: aquamarine;
+  height: 5px;
+  width: 100%;
+  display: block;
+}
+
+.in-flex #inicio {
+  width: 50px;
+  height: 50px;
+  background-color: #343536;
+}
+
 .in-flex:first-child {
   flex: 2;
   background-color: var(--red-color);
@@ -76,7 +117,7 @@ header p {
 .in-flex h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: var(--header-color);
+  color: #fcb900;
 }
 
 .in-flex p {
@@ -86,7 +127,7 @@ header p {
 
 footer {
   text-align: center;
-  background-color: #34495E;
+  background-color: #f3b051;
   color: rgb(254, 249, 249);
   padding: 20px 0;
 }
@@ -108,5 +149,65 @@ footer {
 
   .in-flex div {
     margin-top: var(--base-margin);
+  }
+}
+
+.light-box {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+}
+
+.light-box img {
+  width: 75vw;
+  max-height: 70vh;
+}
+
+.light-box:target {
+  transform: scale(1);
+}
+
+.close {
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background: #851919;
+  border-radius: 50%;
+  color: #ffffff;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.next {
+  display: block;
+  background: #851919;
+  color: #ffffff;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+  .photo-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .close {
+    top: 20px;
+    right: 20px;
   }
 }
