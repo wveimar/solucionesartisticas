@@ -1,17 +1,17 @@
 :root {
-  --main-font: "Century Gothic", Arial, sans-serif;
-  --body-color: #ededed;
-  --header-color: antiquewhite;
-  --red-color: #d44747;
-  --green-color: #aed03f;
-  --base-margin: 1.25rem; /* 20px */
+  --main-font: 'Century Gothic', Arial, sans-serif;
+  --body-color: #F0F3F6;
+  --header-color: #2C3E50;
+  --red-color: #fbf4f3;
+  --green-color: #fdfdfd;
+  --base-margin: 20px;
 }
 
-/* Estilos generales */
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   font-family: var(--main-font);
+  box-sizing: border-box;
 }
 
 body {
@@ -22,51 +22,91 @@ header,
 .in-flex,
 footer {
   padding: var(--base-margin);
-  margin: var(--base-margin);
 }
 
 header {
   background-color: var(--header-color);
+  text-align: center;
+  color: white;
+  position: relative;
 }
 
-/* Estilos para el contenedor principal */
+header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: white; /* Cambio de color del título para mayor contraste */
+}
+
+header p {
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255); /* Cambio de color del texto para mayor contraste */
+}
+
 .home {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-/* Estilos para los elementos flexibles */
 .in-flex {
   flex: 1;
   min-width: 250px;
   background-color: var(--green-color);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: var(--base-margin);
+  overflow: hidden;
 }
 
-/* Estilos específicos para el primer elemento */
 .in-flex:first-child {
   flex: 2;
   background-color: var(--red-color);
 }
 
-footer {
-  text-align: center;
-  background-color: #333;
-  color: white;
+.in-flex h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--header-color);
 }
 
-/* Media Query para pantallas más pequeñas */
+.in-flex p {
+  font-size: 1rem;
+  color: rgb(94, 70, 70);
+}
+
+footer {
+  text-align: center;
+  background-color: #34495E;
+  color: rgb(254, 249, 249);
+  padding: 20px 0;
+}
+
 @media (max-width: 768px) {
   header {
-    text-align: center;
+    margin-top: var(--base-margin);
+  }
+
+  .home {
+    flex-direction: column;
   }
 
   .in-flex {
     flex: 1;
     min-width: auto;
+    margin: var(--base-margin) 0;
   }
 
-  /* Asegura que los elementos dentro de aside sean 100% de ancho */
   .in-flex div {
-    width: 100%;
+    margin-top: var(--base-margin);
   }
 }
