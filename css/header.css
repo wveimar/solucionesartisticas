@@ -1,0 +1,33 @@
+header {
+    background-color: var(--header-color);
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+  header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+  }
+  
+  header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #fcb900; /* Cambio de color del título para mayor contraste */
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    color: #fcb900; /* Cambio de color del texto para mayor contraste */
+  }
+
+  @media (max-width: 768px) {
+    header {
+      margin-top: var(--base-margin);
+    }
+  }

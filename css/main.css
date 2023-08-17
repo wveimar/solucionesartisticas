@@ -1,0 +1,80 @@
+/* Importar estilos individuales */
+@import url("header.css");
+@import url("gallery.css");
+@import url("lightbox.css");
+@import url("footer.css");
+
+/* Estilos globales o compartidos */
+:root {
+  --main-font: "Century Gothic", Arial, sans-serif;
+  --body-color: #f0f3f6;
+  --header-color: #343536;
+  --red-color: #fbf4f3;
+  --green-color: #ffffff;
+  --base-margin: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font);
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+header,
+.in-flex,
+footer {
+  padding: var(--base-margin);
+}
+
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.in-flex {
+  flex: 1;
+  min-width: 250px;
+  background-color: var(--green-color);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: var(--base-margin);
+  overflow: hidden;
+}
+
+.in-flex:first-child {
+  flex: 2;
+  background-color: var(--red-color);
+}
+
+.in-flex h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #fcb900;
+}
+
+.in-flex p {
+  font-size: 1rem;
+  color: rgb(94, 70, 70);
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+  }
+
+  .in-flex {
+    flex: 1;
+    min-width: auto;
+    margin: var(--base-margin) 0;
+  }
+
+  .in-flex div {
+    margin-top: var(--base-margin);
+  }
+}
