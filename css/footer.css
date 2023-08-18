@@ -1,6 +1,93 @@
-footer {
-    text-align: center;
-    background-color: #f3b051;
-    color: rgb(254, 249, 249);
-    padding: 20px 0;
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Estilos para el footer */
+.site-footer {
+  background-color: #222;
+  padding: 50px 0;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-logo img {
+  width: 150px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-contact {
+  max-width: 300px;
+}
+
+.footer-contact h3 {
+  margin-top: 0;
+}
+
+.footer-text {
+  display: flex;
+ gap: 1rem;
+}
+
+
+/* .column {
+  width: calc(50% - 20px);
+  margin: 10px;
+} */
+
+.footer-text p {
+  
+  margin-bottom: 20px;
+}
+
+.footer-bottom {
+  background-color: #111;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #888;
+}
+
+/* Iconos */
+.fas {
+  margin-right: 10px;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
   }
+
+  .footer-contact {
+    margin-top: 20px;
+  }
+
+  .column {
+    width: 100%;
+  }
+}
