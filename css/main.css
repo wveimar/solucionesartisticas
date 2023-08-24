@@ -1,17 +1,26 @@
 /* Importar estilos individuales */
 @import url("header.css");
+@import url("card.css");
 @import url("gallery.css");
 @import url("lightbox.css");
 @import url("footer.css");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
 
 /* Estilos globales o compartidos */
 :root {
-  --main-font: "Century Gothic", Arial, sans-serif;
+  --main-font: "Montserrat", "Fraunces", Arial, serif, sans-serif;
   --body-color: #f0f3f6;
   --header-color: #343536;
-  --red-color: #f0e2e0;
+  --red-color: #d62828;
   --green-color: #f8f8f8;
   --base-margin: 20px;
+  --Dark-cyan: #f1b100;
+  --Cream: hsl(30, 22%, 96%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --very-dark:#e6a900;
+  --title-yellow: #fcb900; 
 }
 
 * {
@@ -23,6 +32,7 @@
 
 body {
   background-color: var(--body-color);
+  
 }
 
 header,
@@ -39,28 +49,12 @@ footer {
 
 .in-flex {
   flex: 1;
-  min-width: 250px;
-  background-color: var(--green-color);
+  min-width:250px;
+  background-color: var(--Cream);
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: var(--base-margin);
   overflow: hidden;
-}
-
-.in-flex:first-child {
-  flex: 2;
-  background-color: var(--red-color);
-}
-
-.in-flex h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #fcb900;
-}
-
-.in-flex p {
-  font-size: 1rem;
-  color: rgb(94, 70, 70);
 }
 
 @media (max-width: 768px) {
