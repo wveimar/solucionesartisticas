@@ -28,9 +28,3 @@ header h2 {
   letter-spacing: 3px;
   margin: 0px 24px 8px 24px;
 }
-
-@media (max-width: 768px) {
-  header {
-    margin-top: var(--base-margin);
-    }
-}
