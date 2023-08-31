@@ -1,5 +1,6 @@
 /* Importar estilos individuales */
 @import url("header.css");
+@import url("carusel.css");
 @import url("card.css");
 @import url("gallery.css");
 @import url("lightbox.css");
