@@ -1,10 +1,23 @@
-.in-flex .photo-gallery {
+
+.imagenes{
+  display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1em;
+}
+.image {
+  position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+
+}
+
+/* .in-flex .photo-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     grid-gap: 5px;
-    padding: 40px 0px;
+    height: 20rem;
     overflow: hidden;
-  }
+  } */
   
   .in-flex .photo-gallery > a {
     display: block;
@@ -21,13 +34,13 @@
   
   .in-flex .photo-gallery img {
     width: 100%;
-    height: 80px;
+    aspect-ratio: 1/1;
     object-fit: cover;
     transition: transform 0.5s;
   }
   
   .in-flex .linea {
-    background-color: aquamarine;
+    background-color: rgb(1, 8, 6);
     height: 5px;
     width: 100%;
     display: block;

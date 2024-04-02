@@ -5,6 +5,7 @@
 @import url("gallery.css");
 @import url("lightbox.css");
 @import url("footer.css");
+@import url("videos.css");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
 
 /* Estilos globales o compartidos */
@@ -20,8 +21,8 @@
   --Very-dark-blue: hsl(212, 21%, 14%);
   --Dark-grayish-blue: hsl(228, 12%, 48%);
   --white: hsl(0, 0%, 100%);
-  --very-dark:#e6a900;
-  --title-yellow: #fcb900; 
+  --very-dark: #e6a900;
+  --title-yellow: #fcb900;
 }
 
 * {
@@ -33,7 +34,6 @@
 
 body {
   background-color: var(--body-color);
-  
 }
 
 header,
@@ -50,7 +50,7 @@ footer {
 
 .in-flex {
   flex: 1;
-  min-width:250px;
+  min-width: 250px;
   background-color: var(--Cream);
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

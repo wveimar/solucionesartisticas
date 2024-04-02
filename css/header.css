@@ -1,12 +1,19 @@
 header {
-  margin: 0;
-  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+  ,url("../assets/portada.jpeg");
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
 }
 
 .header__image {
@@ -15,16 +22,17 @@ header {
 
 header h1 {
   font-family: 'Fraunces', serif;
-  font-size: 2.2em;
+  text-overflow:inherit;
+  font-size: 3.2rem;
   color: #fff48f;
   border: #080808;
-  line-height: 34px;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5);
+  
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.281), -2px -2px 4px rgba(0, 0, 0, 0.5);
 }
 
 header h2 {
-  color: #15150d;
+  color: #ffffff;
   font-size: 1em;
   letter-spacing: 3px;
-  margin: 0px 24px 8px 24px;
+  margin: 28px 24px 8px 24px;
 }
