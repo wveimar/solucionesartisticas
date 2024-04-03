@@ -73,3 +73,28 @@ footer {
     margin-top: var(--base-margin);
   }
 }
+.team{
+  text-align: center;
+}
+.fotosImage {
+  display: flex;
+  width: 1200px;
+  height: 430px;
+  margin: 2rem auto;
+}
+
+.fotosImage img {
+  width: 0px; /* Initial width for each image */
+  border-radius: 5%;
+  flex-grow: 1; /* Images will grow proportionally within the container */
+  object-fit: cover;
+  transition: all 0.8s ease; /* Animate all properties on hover */
+  opacity: 0.5;
+}
+
+.fotosImage img:hover {
+  cursor: crosshair;
+  width: 100px; /* Increase width on hover */
+  opacity: 1; /* Full opacity on hover */
+  filter: contrast(120%); /* Increase contrast on hover */
+}
