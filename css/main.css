@@ -88,7 +88,7 @@ footer {
   border-radius: 5%;
   flex-grow: 1; /* Images will grow proportionally within the container */
   object-fit: cover;
-  transition: all 0.8s ease; /* Animate all properties on hover */
+  transition: all 0.5s ease; /* Animate all properties on hover */
   opacity: 0.5;
 }
 
