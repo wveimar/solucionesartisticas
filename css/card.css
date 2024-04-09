@@ -16,7 +16,7 @@
     color: var(--Dark-grayish-blue);
     font-size: 1em;
     letter-spacing: 3px;
-    margin: 0px 24px 8px 24px;
+    margin: 8px 24px 8px 24px;
   }
 
   .home__in-flex__second--section__title {

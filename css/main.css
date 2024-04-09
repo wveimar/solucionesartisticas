@@ -111,3 +111,77 @@ footer {
     width: calc(40% - 20px); /* Ajustar el ancho aumentado al pasar el cursor para dispositivos móviles */
   }
 }
+
+ 
+.redes {
+  background-color: var(--Very-dark-blue);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  
+}
+
+.redes .iconos {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  background-color: var(--Very-dark-blue);
+  border-radius: 3%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+
+}
+.redes .icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 20px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  transition: all .8s;
+  cursor: pointer;
+}
+
+.redes .icon:hover {
+  background-color: #e60073;
+  box-shadow:  0 0 20px #e60073 ;
+}
+
+.redes .icon:hover:nth-child(2) {
+  background-color: #1877f2;
+  box-shadow:  0 0 20px #1877f2;
+}
+
+.redes .icon:hover:nth-child(3) {
+  background-color: #25d366;
+  box-shadow: 0 0 20px #25d366 ;
+}
+
+.redes .icon:hover:nth-child(4) {
+  background-color: #1da1f2;
+  box-shadow:  0 0 20px #1da1f2 ;
+}
+
+.redes .icon i {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 1.7rem;
+}
+
+.redes svg circle {
+  stroke-dasharray: 150;
+  transition: all .8s ease-in-out;
+}
+
+.redes .icon:hover circle {
+  stroke-dasharray: 220;
+}
