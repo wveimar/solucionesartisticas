@@ -73,21 +73,23 @@ footer {
     margin-top: var(--base-margin);
   }
 }
+
 .team{
   text-align: center;
+  display: grid;
 }
 .fotosImage {
   display: flex;
-  max-width: 1200px;
+  max-width: 700px;
   height: 430px;
   margin: 2rem auto;
 }
 
 .fotosImage img {
-  width: calc(25% - 20px); /* Initial width for each image */
+  width: calc(1.2% - 10px); /* Initial width for each image */
   border-radius: 5%;
   flex-grow: 1; /* Images will grow proportionally within the container */
-  object-fit: cover;
+  object-fit: contain;
   transition: all 0.5s ease; /* Animate all properties on hover */
   opacity: 0.5;
 }
